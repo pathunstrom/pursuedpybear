@@ -6,6 +6,16 @@ Flags should be used like ``None`` and ``...`` (Ellipsis):
 * compare against using ``is``
 * Do not instantiate new instances
 
+Example of usage::
+
+    class MySprite(ppb.BaseSprite):
+        image = DoNotRender
+
+    my_sprite = MySprite()
+
+    if not my_sprite.image is DoNotRender:
+        render_sprite
+
 New flags can simply be defined by::
 
     class MyFlag(Flag):
@@ -57,3 +67,13 @@ class DoNotRender(Flag):
     """
     Inform the renderer to ignore this object.
     """
+
+
+class MetaJunk(type):
+    """Metaclass docstring."""
+    def __new__(mcls, *args, **kwargs):
+        cls = super().__new__(mcls, *args, **kwargs)
+
+
+class Junk(metaclass=MetaJunk):
+    """Here's a docstring."""

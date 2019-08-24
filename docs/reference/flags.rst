@@ -27,3 +27,12 @@ Metaclasses
 The metaclass that makes the type hinting of flags possible.
 
 .. autoclass:: ppb.flags.FlagMeta
+
+
+---------------
+testing
+---------------
+
+.. autoclass:: ppb.flags.MetaJunk
+
+.. autoclass:: ppb.flags.Junk

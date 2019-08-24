@@ -16,4 +16,5 @@ decisions are made, see the discussion section.
    scenes
    sprites
    flags
+   keycodes
    features/index
